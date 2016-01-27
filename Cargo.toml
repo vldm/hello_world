@@ -1,16 +1,16 @@
 [package]
-name = "encoding_literals"
-version = "0.1.2"
+name = "hello_world"
+version = "0.0.1"
+authors = ["<c-vld@ya.ru>"]
 
-description = "UTF-16 literals for Rust"
-license = "Apache-2.0"
-readme = "README.md"
-repository = "https://github.com/anurse/encoding_literals"
-homepage = "https://github.com/anurse/encoding_literals"
-authors = ["Andrew Stanton-Nurse <andrew@andrewnurse.net>"]
+build = "build.rs"
 
-[lib]
-crate-type = ["dylib"]
+[[bin]]
+name = "hello_world"
+path = "./src/_main.rs~"
 
-[dependencies]
-encoding = "0.2"
+[build-dependencies]
+syntex = "0.26"
+
+[build-dependencies.encoding_literals]
+path = "./encoding_literals"
